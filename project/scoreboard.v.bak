@@ -1,0 +1,62 @@
+module scoreboard (
+    input clk,
+    input [9:0] next_x, 
+	 input [9:0] next_y,
+    input [15:0] score,
+    output reg [2:0] color
+);
+    parameter h_disp = 640;
+    parameter v_disp = 480;
+    localparam char_width = 16;
+    localparam char_height = 32;
+    localparam start_x = (h_disp - 8 * char_width) / 2; // Center horizontally for "SCORE = XXXX"
+    localparam start_y = (v_disp - char_height) / 2;   // Center vertically
+
+    // Convert score to digits
+    reg [3:0] digits[3:0];  // Array to hold up to 4 digits
+    integer i;
+    reg [15:0] temp_score;
+
+    always @(*) begin
+        temp_score = score;
+        for (i = 0; i < 4; i = i + 1) begin
+            digits[i] = temp_score % 10;
+            temp_score = temp_score / 10;
+        end
+    end
+
+    // Generate 7 segment display for each digit
+    wire [6:0] seg0, seg1, seg2, seg3;
+    seven_segment_display seg_inst0 (.digit(digits[0]), .segments(seg0));
+    seven_segment_display seg_inst1 (.digit(digits[1]), .segments(seg1));
+    seven_segment_display seg_inst2 (.digit(digits[2]), .segments(seg2));
+    seven_segment_display seg_inst3 (.digit(digits[3]), .segments(seg3));
+
+    // Pixel color generation
+    always @(posedge clk) begin
+        if (next_x >= start_x && next_x < (start_x + 8 * char_width) &&
+            next_y >= start_y && next_y < (start_y + char_height)) begin
+            // Inside the bounding box for "SCORE = XXXX"
+            // Determine which character we are currently in
+            integer char_index = (next_x - start_x) / char_width;
+            integer pixel_x = (next_x - start_x) % char_width;
+            integer pixel_y = next_y - start_y;
+
+            case (char_index)
+                0: if (pixel_x < char_width && pixel_y < char_height) color = 3'b111; // 'S'
+                1: if (pixel_x < char_width && pixel_y < char_height) color = 3'b111; // 'C'
+                2: if (pixel_x < char_width && pixel_y < char_height) color = 3'b111; // 'O'
+                3: if (pixel_x < char_width && pixel_y < char_height) color = 3'b111; // 'R'
+                4: if (pixel_x < char_width && pixel_y < char_height) color = 3'b111; // 'E'
+                5: if (pixel_x < char_width && pixel_y < char_height) color = 3'b111; // '='
+                6: if (pixel_x < char_width && pixel_y < char_height) color = ~seg3[pixel_y / (char_height / 7)]; // First digit
+                7: if (pixel_x < char_width && pixel_y < char_height) color = ~seg2[pixel_y / (char_height / 7)]; // Second digit
+                8: if (pixel_x < char_width && pixel_y < char_height) color = ~seg1[pixel_y / (char_height / 7)]; // Third digit
+                9: if (pixel_x < char_width && pixel_y < char_height) color = ~seg0[pixel_y / (char_height / 7)]; // Fourth digit
+                default: color = 3'b000; // Outside valid range
+            endcase
+        end else begin
+            color = 3'b000; // Black background
+        end
+    end
+endmodule

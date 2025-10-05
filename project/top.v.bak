@@ -1,0 +1,38 @@
+module top(fpgaclk,hsync,vsync,red,green,blue,sync,clk,blank);
+input fpgaclk;
+//output [9:0]  next_x;
+//output [9:0]  next_y;
+wire [9:0]  next_x;
+wire [9:0]  next_y;
+
+output  hsync;
+output  vsync;
+output [7:0] red;
+output [7:0] green;
+output [7:0] blue;
+output sync;
+output clk;
+output blank;
+
+reg x;
+reg [24:0]  count;
+reg reset;
+initial begin
+x =0;
+count = 1;
+reset =1;
+end
+always @(posedge fpgaclk) begin
+	x <= !(x);
+	if (count != 0) begin
+		count <= count +1;
+	end
+	else begin
+		reset =0;
+	end
+
+	
+end
+vga_driver u1(x,reset,7'b11100000,next_x,next_y,hsync,vsync,red,green,blue,sync,clk,blank);
+endmodule
+

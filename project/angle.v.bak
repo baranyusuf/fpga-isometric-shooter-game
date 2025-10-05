@@ -1,0 +1,12 @@
+module current_angle();
+input wire clk;          
+input wire btn_right;    
+input wire btn_left;
+output reg [4:0] angle;
+always @(posedge btn_right) begin
+		angle <= angle + 1;
+end
+always @(posedge btn_right) begin
+		angle <= angle + 1;
+end
+endmodule

@@ -1,0 +1,94 @@
+module shoot_mechanism(clk,shoot,shoot_type,angle_rocket,angle_enemy1,angle_enemy2,angle_enemy3,angle_enemy4,angle_enemy5,angle_enemy6,angle_enemy7,angle_enemy8,aliveness_of_enemy1,aliveness_of_enemy2,aliveness_of_enemy3,aliveness_of_enemy4,aliveness_of_enemy5,aliveness_of_enemy6,aliveness_of_enemy7,aliveness_of_enemy8,typeA,typeB,typeC);
+	input shoot,clk;
+	input [1:0] shoot_type; // 00 doğrusal 3can typea ,01 doğrusal 3can typea, 10 45derece 2can typeb, 11 90derece 1 cantypec;
+	input [3:0] angle_rocket;
+	input [3:0] angle_enemy1,angle_enemy2,angle_enemy3,angle_enemy4,angle_enemy5,angle_enemy6,angle_enemy7,angle_enemy8;
+	input aliveness_of_enemy1,aliveness_of_enemy2,aliveness_of_enemy3,aliveness_of_enemy4,aliveness_of_enemy5,aliveness_of_enemy6,aliveness_of_enemy7,aliveness_of_enemy8;
+	output reg [8:0] typeA,typeB,typeC;
+	initial begin 
+		typeA<=8'b00000000;
+		typeB<=8'b00000000;
+		typeC<=8'b00000000;
+	end
+	always @(posedge clk) begin
+		if (shoot==0&&shoot_type[1]==0) begin
+			if (angle_rocket==angle_enemy1&&aliveness_of_enemy1==1) begin
+			typeA[0]<=1;
+			end
+			if (angle_rocket==angle_enemy2&&aliveness_of_enemy2==1)begin
+			typeA[1]<=1;
+			end
+			if (angle_rocket==angle_enemy3&&aliveness_of_enemy3==1)begin
+			typeA[2]<=1;
+			end
+			if (angle_rocket==angle_enemy4&&aliveness_of_enemy4==1)begin
+			typeA[3]<=1;
+			end
+			if (angle_rocket==angle_enemy5&&aliveness_of_enemy5==1)begin
+			typeA[4]<=1;
+			end
+			if (angle_rocket==angle_enemy6&&aliveness_of_enemy6==1)begin
+			typeA[5]<=1;
+			end
+			if (angle_rocket==angle_enemy7&&aliveness_of_enemy7==1)begin
+			typeA[6]<=1;
+			end
+			if (angle_rocket==angle_enemy8&&aliveness_of_enemy8==1)begin
+			typeA[7]<=1;
+			end
+		end
+		if (shoot==0&&shoot_type==2'b10)	begin
+			if ((angle_rocket==angle_enemy1 || angle_rocket-1==angle_enemy1 || angle_rocket+1==angle_enemy1)&&aliveness_of_enemy1==1) begin
+			typeB[0]<=1;
+			end
+			if ((angle_rocket==angle_enemy2||angle_rocket-1==angle_enemy2||angle_rocket+1==angle_enemy2)&&aliveness_of_enemy2==1 ) begin
+			typeB[1]<=1;
+			end
+			if ((angle_rocket==angle_enemy3||angle_rocket-1==angle_enemy3||angle_rocket+1==angle_enemy3)&&aliveness_of_enemy3==1 ) begin
+			typeB[2]<=1;
+			end
+			if ((angle_rocket==angle_enemy4||angle_rocket-1==angle_enemy4||angle_rocket+1==angle_enemy4)&&aliveness_of_enemy4==1) begin
+			typeB[3]<=1;
+			end
+			if ((angle_rocket==angle_enemy5||angle_rocket-1==angle_enemy5||angle_rocket+1==angle_enemy5)&&aliveness_of_enemy5==1) begin
+			typeB[4]<=1;
+			end
+			if ((angle_rocket==angle_enemy6||angle_rocket-1==angle_enemy6||angle_rocket+1==angle_enemy6)&&aliveness_of_enemy6==1) begin
+			typeB[5]<=1;
+			end
+			if ((angle_rocket==angle_enemy7||angle_rocket-1==angle_enemy7||angle_rocket+1==angle_enemy7)&&aliveness_of_enemy7==1 )begin
+			typeB[6]<=1;
+			end
+			if ((angle_rocket==angle_enemy8||angle_rocket-1==angle_enemy8||angle_rocket+1==angle_enemy8)&&aliveness_of_enemy8==1 )begin
+			typeB[7]<=1;
+			end
+		end
+
+		if (shoot==0&&shoot_type==2'b11)	begin
+			if ((angle_rocket==angle_enemy1 || angle_rocket-1==angle_enemy1 || angle_rocket+1==angle_enemy1|| angle_rocket-2==angle_enemy1 || angle_rocket+2==angle_enemy1) &&aliveness_of_enemy1==1 )begin
+			typeC[0]<=1;
+			end
+			if ((angle_rocket==angle_enemy2||angle_rocket-1==angle_enemy2||angle_rocket+1==angle_enemy2|| angle_rocket-2==angle_enemy2 || angle_rocket+2==angle_enemy2) &&aliveness_of_enemy2==1) begin
+			typeC[1]<=1;
+			end
+			if ((angle_rocket==angle_enemy3||angle_rocket-1==angle_enemy3||angle_rocket+1==angle_enemy3|| angle_rocket-2==angle_enemy3 || angle_rocket+2==angle_enemy3)  &&aliveness_of_enemy3==1) begin
+			typeC[2]<=1;
+			end
+			if ((angle_rocket==angle_enemy4||angle_rocket-1==angle_enemy4||angle_rocket+1==angle_enemy4|| angle_rocket-2==angle_enemy4 || angle_rocket+2==angle_enemy4)&&aliveness_of_enemy4==1 )begin
+			typeC[3]<=1;
+			end
+			if ((angle_rocket==angle_enemy5||angle_rocket-1==angle_enemy5||angle_rocket+1==angle_enemy5|| angle_rocket-2==angle_enemy5 || angle_rocket+2==angle_enemy5)&&aliveness_of_enemy5==1) begin
+			typeC[4]<=1;
+			end
+			if ((angle_rocket==angle_enemy6||angle_rocket-1==angle_enemy6||angle_rocket+1==angle_enemy6|| angle_rocket-2==angle_enemy6 || angle_rocket+2==angle_enemy6)&&aliveness_of_enemy6==1) begin
+			typeC[5]<=1;
+			end
+			if ((angle_rocket==angle_enemy7||angle_rocket-1==angle_enemy7||angle_rocket+1==angle_enemy7|| angle_rocket-2==angle_enemy7 || angle_rocket+2==angle_enemy7)&&aliveness_of_enemy7==1 )begin
+			typeC[6]<=1;
+			end
+			if ((angle_rocket==angle_enemy8||angle_rocket-1==angle_enemy8||angle_rocket+1==angle_enemy8|| angle_rocket-2==angle_enemy8 || angle_rocket+2==angle_enemy8)&&aliveness_of_enemy8==1 )begin
+			typeC[7]<=1;
+			end
+		end
+	end
+endmodule

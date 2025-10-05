@@ -1,0 +1,28 @@
+	module yildiz_kumlu (
+    input clk,
+    input [9:0] next_x,
+    input [9:0] next_y,
+    output reg [6:0] color
+);
+
+    reg [19:0] lfsr;
+
+    // Initialize LFSR for random star generation
+    initial begin
+        lfsr = 20'b10101010101010101010; // Some random initial value
+    end
+
+    always @(posedge clk) begin
+        // Simple LFSR for pseudo-random star placement
+        lfsr <= {lfsr[18:0], lfsr[19] ^ lfsr[2]};
+
+        // Default background color: black
+        color <= 7'b0000000;
+
+        // Generate stars at pseudo-random positions
+        if (lfsr[0] && ((next_x + lfsr[9:0]) % 64 < 2) && ((next_y + lfsr[19:10]) % 48 < 2)) begin
+            color <= 7'b1111111; // White stars
+        end
+    end
+
+endmodule

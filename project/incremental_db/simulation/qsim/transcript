@@ -1,0 +1,903 @@
+# do f2.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_vlg_sample_tst
+# -- Compiling module top_vlg_check_tst
+# -- Compiling module top_vlg_vec_tst
+# 
+# Top level modules:
+# 	top_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.top_vlg_vec_tst 
+# Loading work.top_vlg_vec_tst
+# Loading work.top
+# Loading altera_ver.dffeas
+# Loading work.top_vlg_sample_tst
+# Loading work.top_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3016) f2.vo(17358): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(17358): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(17358): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(17358): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(17358): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(17358): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(17358): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(17358): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(17358): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(17358): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(17358): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(17553): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(17553): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(17553): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(17553): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(17553): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(17553): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(17553): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(17553): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(17553): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(17553): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc5|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(26162): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(26162): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(26162): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(26162): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(26162): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(26162): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(26162): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(26162): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(26162): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(26162): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(26162): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(26364): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(26364): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(26364): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(26364): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(26364): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(26364): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(26364): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(26364): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(26364): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(26364): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc6|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(33283): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(33283): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(33283): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(33283): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(33283): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(33283): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(33283): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(33283): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(33283): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(33283): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(33585): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(33585): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(33585): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(33585): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(33585): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(33585): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(33585): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(33585): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(33585): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(33585): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(33585): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc7|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(39404): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(39404): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(39404): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(39404): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(39404): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(39404): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(39404): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(39404): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(39404): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(39404): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(39556): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(39556): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(39556): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(39556): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(39556): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(39556): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(39556): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(39556): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(39556): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(39556): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(39556): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc1|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(45728): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(45728): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(45728): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(45728): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(45728): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(45728): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(45728): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(45728): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(45728): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(45728): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(46006): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(46006): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(46006): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(46006): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(46006): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(46006): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(46006): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(46006): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(46006): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(46006): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(46006): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc3|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(53847): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(53847): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(53847): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(53847): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(53847): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(53847): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(53847): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(53847): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(53847): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(53847): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(54149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(54149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(54149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(54149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(54149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(54149): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(54149): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(54149): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(54149): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(54149): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(54149): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc2|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(60939): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(60939): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(60939): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(60939): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(60939): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(60939): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(60939): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(60939): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(60939): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(60939): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(61091): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(61091): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(61091): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(61091): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(61091): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(61091): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(61091): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(61091): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(61091): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(61091): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(61091): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc4|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(68149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(68149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(68149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3016) f2.vo(68149): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(68149): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(68149): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(68149): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(68149): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(68149): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-3015) f2.vo(68149): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-3016) f2.vo(68451): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(68451): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(68451): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(68451): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3016) f2.vo(68451): Port type is incompatible with connection (port 'ax').
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(68451): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(68451): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(68451): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(68451): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(68451): [PCDPC] - Port size (5 or 5) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-3015) f2.vo(68451): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /top_vlg_vec_tst/i1/\u6|loc8|Mult1~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ERROR! Vector Mismatch for output port alien1_wire[1] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[3] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[4] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[5] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[6] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[7] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[8] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[9] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[10] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[11] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien1_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111010
+# ERROR! Vector Mismatch for output port alien2_wire[2] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[3] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[4] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[5] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[6] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[7] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[8] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[9] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[10] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[12] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien2_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111011111111100
+# ERROR! Vector Mismatch for output port alien3_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien3_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien4_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien4_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien5_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien5_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien6_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien6_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien7_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien7_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien8_wire[13] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port alien8_wire[14] :: @time = 1004000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000000000000
+# ERROR! Vector Mismatch for output port blank :: @time = 1004000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port hsync :: @time = 1004000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port sample_total[1] :: @time = 1004000.000 ps
+#      Expected value = 000
+#      Real value = 010
+# ERROR! Vector Mismatch for output port vsync :: @time = 1004000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port clk :: @time = 1009000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port alien3_wire[0] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[3] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[4] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[5] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[6] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[7] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[8] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[9] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[10] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[11] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port alien3_wire[12] :: @time = 20029000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111111111111001
+# ERROR! Vector Mismatch for output port sample_total[0] :: @time = 20029000.000 ps
+#      Expected value = 000
+#      Real value = 011
+# ERROR! Vector Mismatch for output port alien4_wire[2] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[3] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[4] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[5] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[6] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[7] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[8] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[9] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[10] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port alien4_wire[11] :: @time = 40049000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110111111111100
+# ERROR! Vector Mismatch for output port sample_total[2] :: @time = 40049000.000 ps
+#      Expected value = 000
+#      Real value = 100
+# ERROR! Vector Mismatch for output port alien5_wire[0] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[3] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[4] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[5] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[6] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[7] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[8] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[10] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[11] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien5_wire[12] :: @time = 60069000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0111110111111001
+# ERROR! Vector Mismatch for output port alien6_wire[2] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+# ERROR! Vector Mismatch for output port alien6_wire[3] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+# ERROR! Vector Mismatch for output port alien6_wire[4] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+# ERROR! Vector Mismatch for output port alien6_wire[5] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+# ERROR! Vector Mismatch for output port alien6_wire[6] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+# ERROR! Vector Mismatch for output port alien6_wire[7] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+# ERROR! Vector Mismatch for output port alien6_wire[8] :: @time = 80089000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0110000111111100
+#          81 mismatched vectors : Simulation failed !
+# ** Note: $finish    : Waveform1.vwf.vt(3310)
+#    Time: 100 us  Iteration: 0  Instance: /top_vlg_vec_tst/tb_out

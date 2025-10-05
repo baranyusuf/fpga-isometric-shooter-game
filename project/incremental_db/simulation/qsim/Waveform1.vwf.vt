@@ -1,0 +1,3445 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/09/2024 19:25:28"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    top
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module top_vlg_sample_tst(
+	btn_left,
+	btn_right,
+	fpgaclk,
+	sw_shooting_mode1,
+	sw_shooting_mode2,
+	sampler_tx
+);
+input  btn_left;
+input  btn_right;
+input  fpgaclk;
+input  sw_shooting_mode1;
+input  sw_shooting_mode2;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(btn_left or btn_right or fpgaclk or sw_shooting_mode1 or sw_shooting_mode2)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module top_vlg_check_tst (
+	alien1_wire,
+	alien2_wire,
+	alien3_wire,
+	alien4_wire,
+	alien5_wire,
+	alien6_wire,
+	alien7_wire,
+	alien8_wire,
+	blank,
+	blue,
+	clk,
+	green,
+	hsync,
+	red,
+	sample_total,
+	sync,
+	vsync,
+	sampler_rx
+);
+input [15:0] alien1_wire;
+input [15:0] alien2_wire;
+input [15:0] alien3_wire;
+input [15:0] alien4_wire;
+input [15:0] alien5_wire;
+input [15:0] alien6_wire;
+input [15:0] alien7_wire;
+input [15:0] alien8_wire;
+input  blank;
+input [7:0] blue;
+input  clk;
+input [7:0] green;
+input  hsync;
+input [7:0] red;
+input [2:0] sample_total;
+input  sync;
+input  vsync;
+input sampler_rx;
+
+reg [15:0] alien1_wire_expected;
+reg [15:0] alien2_wire_expected;
+reg [15:0] alien3_wire_expected;
+reg [15:0] alien4_wire_expected;
+reg [15:0] alien5_wire_expected;
+reg [15:0] alien6_wire_expected;
+reg [15:0] alien7_wire_expected;
+reg [15:0] alien8_wire_expected;
+reg  blank_expected;
+reg [7:0] blue_expected;
+reg  clk_expected;
+reg [7:0] green_expected;
+reg  hsync_expected;
+reg [7:0] red_expected;
+reg [2:0] sample_total_expected;
+reg  sync_expected;
+reg  vsync_expected;
+
+reg [15:0] alien1_wire_prev;
+reg [15:0] alien2_wire_prev;
+reg [15:0] alien3_wire_prev;
+reg [15:0] alien4_wire_prev;
+reg [15:0] alien5_wire_prev;
+reg [15:0] alien6_wire_prev;
+reg [15:0] alien7_wire_prev;
+reg [15:0] alien8_wire_prev;
+reg  blank_prev;
+reg [7:0] blue_prev;
+reg  clk_prev;
+reg [7:0] green_prev;
+reg  hsync_prev;
+reg [7:0] red_prev;
+reg [2:0] sample_total_prev;
+reg  sync_prev;
+reg  vsync_prev;
+
+reg [15:0] alien1_wire_expected_prev;
+reg [15:0] alien2_wire_expected_prev;
+reg [15:0] alien3_wire_expected_prev;
+reg [15:0] alien4_wire_expected_prev;
+reg [15:0] alien5_wire_expected_prev;
+reg [15:0] alien6_wire_expected_prev;
+reg [15:0] alien7_wire_expected_prev;
+reg [15:0] alien8_wire_expected_prev;
+reg  blank_expected_prev;
+reg [7:0] blue_expected_prev;
+reg  clk_expected_prev;
+reg [7:0] green_expected_prev;
+reg  hsync_expected_prev;
+reg [7:0] red_expected_prev;
+reg [2:0] sample_total_expected_prev;
+reg  sync_expected_prev;
+reg  vsync_expected_prev;
+
+reg [15:0] last_alien1_wire_exp;
+reg [15:0] last_alien2_wire_exp;
+reg [15:0] last_alien3_wire_exp;
+reg [15:0] last_alien4_wire_exp;
+reg [15:0] last_alien5_wire_exp;
+reg [15:0] last_alien6_wire_exp;
+reg [15:0] last_alien7_wire_exp;
+reg [15:0] last_alien8_wire_exp;
+reg  last_blank_exp;
+reg [7:0] last_blue_exp;
+reg  last_clk_exp;
+reg [7:0] last_green_exp;
+reg  last_hsync_exp;
+reg [7:0] last_red_exp;
+reg [2:0] last_sample_total_exp;
+reg  last_sync_exp;
+reg  last_vsync_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:17] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 17'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	alien1_wire_prev = alien1_wire;
+	alien2_wire_prev = alien2_wire;
+	alien3_wire_prev = alien3_wire;
+	alien4_wire_prev = alien4_wire;
+	alien5_wire_prev = alien5_wire;
+	alien6_wire_prev = alien6_wire;
+	alien7_wire_prev = alien7_wire;
+	alien8_wire_prev = alien8_wire;
+	blank_prev = blank;
+	blue_prev = blue;
+	clk_prev = clk;
+	green_prev = green;
+	hsync_prev = hsync;
+	red_prev = red;
+	sample_total_prev = sample_total;
+	sync_prev = sync;
+	vsync_prev = vsync;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	alien1_wire_expected_prev = alien1_wire_expected;
+	alien2_wire_expected_prev = alien2_wire_expected;
+	alien3_wire_expected_prev = alien3_wire_expected;
+	alien4_wire_expected_prev = alien4_wire_expected;
+	alien5_wire_expected_prev = alien5_wire_expected;
+	alien6_wire_expected_prev = alien6_wire_expected;
+	alien7_wire_expected_prev = alien7_wire_expected;
+	alien8_wire_expected_prev = alien8_wire_expected;
+	blank_expected_prev = blank_expected;
+	blue_expected_prev = blue_expected;
+	clk_expected_prev = clk_expected;
+	green_expected_prev = green_expected;
+	hsync_expected_prev = hsync_expected;
+	red_expected_prev = red_expected;
+	sample_total_expected_prev = sample_total_expected;
+	sync_expected_prev = sync_expected;
+	vsync_expected_prev = vsync_expected;
+end
+
+
+// expected alien1_wire[ 15 ]
+initial
+begin
+	alien1_wire_expected[15] = 1'bX;
+	alien1_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien1_wire[ 14 ]
+initial
+begin
+	alien1_wire_expected[14] = 1'bX;
+	alien1_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien1_wire[ 13 ]
+initial
+begin
+	alien1_wire_expected[13] = 1'bX;
+	alien1_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien1_wire[ 12 ]
+initial
+begin
+	alien1_wire_expected[12] = 1'bX;
+	alien1_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien1_wire[ 11 ]
+initial
+begin
+	alien1_wire_expected[11] = 1'bX;
+	alien1_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien1_wire[ 10 ]
+initial
+begin
+	alien1_wire_expected[10] = 1'bX;
+	alien1_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien1_wire[ 9 ]
+initial
+begin
+	alien1_wire_expected[9] = 1'bX;
+	alien1_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien1_wire[ 8 ]
+initial
+begin
+	alien1_wire_expected[8] = 1'bX;
+	alien1_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien1_wire[ 7 ]
+initial
+begin
+	alien1_wire_expected[7] = 1'bX;
+	alien1_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien1_wire[ 6 ]
+initial
+begin
+	alien1_wire_expected[6] = 1'bX;
+	alien1_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien1_wire[ 5 ]
+initial
+begin
+	alien1_wire_expected[5] = 1'bX;
+	alien1_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien1_wire[ 4 ]
+initial
+begin
+	alien1_wire_expected[4] = 1'bX;
+	alien1_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien1_wire[ 3 ]
+initial
+begin
+	alien1_wire_expected[3] = 1'bX;
+	alien1_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien1_wire[ 2 ]
+initial
+begin
+	alien1_wire_expected[2] = 1'bX;
+	alien1_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien1_wire[ 1 ]
+initial
+begin
+	alien1_wire_expected[1] = 1'bX;
+	alien1_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien1_wire[ 0 ]
+initial
+begin
+	alien1_wire_expected[0] = 1'bX;
+	alien1_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien2_wire[ 15 ]
+initial
+begin
+	alien2_wire_expected[15] = 1'bX;
+	alien2_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien2_wire[ 14 ]
+initial
+begin
+	alien2_wire_expected[14] = 1'bX;
+	alien2_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien2_wire[ 13 ]
+initial
+begin
+	alien2_wire_expected[13] = 1'bX;
+	alien2_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien2_wire[ 12 ]
+initial
+begin
+	alien2_wire_expected[12] = 1'bX;
+	alien2_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien2_wire[ 11 ]
+initial
+begin
+	alien2_wire_expected[11] = 1'bX;
+	alien2_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien2_wire[ 10 ]
+initial
+begin
+	alien2_wire_expected[10] = 1'bX;
+	alien2_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien2_wire[ 9 ]
+initial
+begin
+	alien2_wire_expected[9] = 1'bX;
+	alien2_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien2_wire[ 8 ]
+initial
+begin
+	alien2_wire_expected[8] = 1'bX;
+	alien2_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien2_wire[ 7 ]
+initial
+begin
+	alien2_wire_expected[7] = 1'bX;
+	alien2_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien2_wire[ 6 ]
+initial
+begin
+	alien2_wire_expected[6] = 1'bX;
+	alien2_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien2_wire[ 5 ]
+initial
+begin
+	alien2_wire_expected[5] = 1'bX;
+	alien2_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien2_wire[ 4 ]
+initial
+begin
+	alien2_wire_expected[4] = 1'bX;
+	alien2_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien2_wire[ 3 ]
+initial
+begin
+	alien2_wire_expected[3] = 1'bX;
+	alien2_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien2_wire[ 2 ]
+initial
+begin
+	alien2_wire_expected[2] = 1'bX;
+	alien2_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien2_wire[ 1 ]
+initial
+begin
+	alien2_wire_expected[1] = 1'bX;
+	alien2_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien2_wire[ 0 ]
+initial
+begin
+	alien2_wire_expected[0] = 1'bX;
+	alien2_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien3_wire[ 15 ]
+initial
+begin
+	alien3_wire_expected[15] = 1'bX;
+	alien3_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien3_wire[ 14 ]
+initial
+begin
+	alien3_wire_expected[14] = 1'bX;
+	alien3_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien3_wire[ 13 ]
+initial
+begin
+	alien3_wire_expected[13] = 1'bX;
+	alien3_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien3_wire[ 12 ]
+initial
+begin
+	alien3_wire_expected[12] = 1'bX;
+	alien3_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien3_wire[ 11 ]
+initial
+begin
+	alien3_wire_expected[11] = 1'bX;
+	alien3_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien3_wire[ 10 ]
+initial
+begin
+	alien3_wire_expected[10] = 1'bX;
+	alien3_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien3_wire[ 9 ]
+initial
+begin
+	alien3_wire_expected[9] = 1'bX;
+	alien3_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien3_wire[ 8 ]
+initial
+begin
+	alien3_wire_expected[8] = 1'bX;
+	alien3_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien3_wire[ 7 ]
+initial
+begin
+	alien3_wire_expected[7] = 1'bX;
+	alien3_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien3_wire[ 6 ]
+initial
+begin
+	alien3_wire_expected[6] = 1'bX;
+	alien3_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien3_wire[ 5 ]
+initial
+begin
+	alien3_wire_expected[5] = 1'bX;
+	alien3_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien3_wire[ 4 ]
+initial
+begin
+	alien3_wire_expected[4] = 1'bX;
+	alien3_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien3_wire[ 3 ]
+initial
+begin
+	alien3_wire_expected[3] = 1'bX;
+	alien3_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien3_wire[ 2 ]
+initial
+begin
+	alien3_wire_expected[2] = 1'bX;
+	alien3_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien3_wire[ 1 ]
+initial
+begin
+	alien3_wire_expected[1] = 1'bX;
+	alien3_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien3_wire[ 0 ]
+initial
+begin
+	alien3_wire_expected[0] = 1'bX;
+	alien3_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien4_wire[ 15 ]
+initial
+begin
+	alien4_wire_expected[15] = 1'bX;
+	alien4_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien4_wire[ 14 ]
+initial
+begin
+	alien4_wire_expected[14] = 1'bX;
+	alien4_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien4_wire[ 13 ]
+initial
+begin
+	alien4_wire_expected[13] = 1'bX;
+	alien4_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien4_wire[ 12 ]
+initial
+begin
+	alien4_wire_expected[12] = 1'bX;
+	alien4_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien4_wire[ 11 ]
+initial
+begin
+	alien4_wire_expected[11] = 1'bX;
+	alien4_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien4_wire[ 10 ]
+initial
+begin
+	alien4_wire_expected[10] = 1'bX;
+	alien4_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien4_wire[ 9 ]
+initial
+begin
+	alien4_wire_expected[9] = 1'bX;
+	alien4_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien4_wire[ 8 ]
+initial
+begin
+	alien4_wire_expected[8] = 1'bX;
+	alien4_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien4_wire[ 7 ]
+initial
+begin
+	alien4_wire_expected[7] = 1'bX;
+	alien4_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien4_wire[ 6 ]
+initial
+begin
+	alien4_wire_expected[6] = 1'bX;
+	alien4_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien4_wire[ 5 ]
+initial
+begin
+	alien4_wire_expected[5] = 1'bX;
+	alien4_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien4_wire[ 4 ]
+initial
+begin
+	alien4_wire_expected[4] = 1'bX;
+	alien4_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien4_wire[ 3 ]
+initial
+begin
+	alien4_wire_expected[3] = 1'bX;
+	alien4_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien4_wire[ 2 ]
+initial
+begin
+	alien4_wire_expected[2] = 1'bX;
+	alien4_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien4_wire[ 1 ]
+initial
+begin
+	alien4_wire_expected[1] = 1'bX;
+	alien4_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien4_wire[ 0 ]
+initial
+begin
+	alien4_wire_expected[0] = 1'bX;
+	alien4_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien5_wire[ 15 ]
+initial
+begin
+	alien5_wire_expected[15] = 1'bX;
+	alien5_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien5_wire[ 14 ]
+initial
+begin
+	alien5_wire_expected[14] = 1'bX;
+	alien5_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien5_wire[ 13 ]
+initial
+begin
+	alien5_wire_expected[13] = 1'bX;
+	alien5_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien5_wire[ 12 ]
+initial
+begin
+	alien5_wire_expected[12] = 1'bX;
+	alien5_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien5_wire[ 11 ]
+initial
+begin
+	alien5_wire_expected[11] = 1'bX;
+	alien5_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien5_wire[ 10 ]
+initial
+begin
+	alien5_wire_expected[10] = 1'bX;
+	alien5_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien5_wire[ 9 ]
+initial
+begin
+	alien5_wire_expected[9] = 1'bX;
+	alien5_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien5_wire[ 8 ]
+initial
+begin
+	alien5_wire_expected[8] = 1'bX;
+	alien5_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien5_wire[ 7 ]
+initial
+begin
+	alien5_wire_expected[7] = 1'bX;
+	alien5_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien5_wire[ 6 ]
+initial
+begin
+	alien5_wire_expected[6] = 1'bX;
+	alien5_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien5_wire[ 5 ]
+initial
+begin
+	alien5_wire_expected[5] = 1'bX;
+	alien5_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien5_wire[ 4 ]
+initial
+begin
+	alien5_wire_expected[4] = 1'bX;
+	alien5_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien5_wire[ 3 ]
+initial
+begin
+	alien5_wire_expected[3] = 1'bX;
+	alien5_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien5_wire[ 2 ]
+initial
+begin
+	alien5_wire_expected[2] = 1'bX;
+	alien5_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien5_wire[ 1 ]
+initial
+begin
+	alien5_wire_expected[1] = 1'bX;
+	alien5_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien5_wire[ 0 ]
+initial
+begin
+	alien5_wire_expected[0] = 1'bX;
+	alien5_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien6_wire[ 15 ]
+initial
+begin
+	alien6_wire_expected[15] = 1'bX;
+	alien6_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien6_wire[ 14 ]
+initial
+begin
+	alien6_wire_expected[14] = 1'bX;
+	alien6_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien6_wire[ 13 ]
+initial
+begin
+	alien6_wire_expected[13] = 1'bX;
+	alien6_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien6_wire[ 12 ]
+initial
+begin
+	alien6_wire_expected[12] = 1'bX;
+	alien6_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien6_wire[ 11 ]
+initial
+begin
+	alien6_wire_expected[11] = 1'bX;
+	alien6_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien6_wire[ 10 ]
+initial
+begin
+	alien6_wire_expected[10] = 1'bX;
+	alien6_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien6_wire[ 9 ]
+initial
+begin
+	alien6_wire_expected[9] = 1'bX;
+	alien6_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien6_wire[ 8 ]
+initial
+begin
+	alien6_wire_expected[8] = 1'bX;
+	alien6_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien6_wire[ 7 ]
+initial
+begin
+	alien6_wire_expected[7] = 1'bX;
+	alien6_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien6_wire[ 6 ]
+initial
+begin
+	alien6_wire_expected[6] = 1'bX;
+	alien6_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien6_wire[ 5 ]
+initial
+begin
+	alien6_wire_expected[5] = 1'bX;
+	alien6_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien6_wire[ 4 ]
+initial
+begin
+	alien6_wire_expected[4] = 1'bX;
+	alien6_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien6_wire[ 3 ]
+initial
+begin
+	alien6_wire_expected[3] = 1'bX;
+	alien6_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien6_wire[ 2 ]
+initial
+begin
+	alien6_wire_expected[2] = 1'bX;
+	alien6_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien6_wire[ 1 ]
+initial
+begin
+	alien6_wire_expected[1] = 1'bX;
+	alien6_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien6_wire[ 0 ]
+initial
+begin
+	alien6_wire_expected[0] = 1'bX;
+	alien6_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien7_wire[ 15 ]
+initial
+begin
+	alien7_wire_expected[15] = 1'bX;
+	alien7_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien7_wire[ 14 ]
+initial
+begin
+	alien7_wire_expected[14] = 1'bX;
+	alien7_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien7_wire[ 13 ]
+initial
+begin
+	alien7_wire_expected[13] = 1'bX;
+	alien7_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien7_wire[ 12 ]
+initial
+begin
+	alien7_wire_expected[12] = 1'bX;
+	alien7_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien7_wire[ 11 ]
+initial
+begin
+	alien7_wire_expected[11] = 1'bX;
+	alien7_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien7_wire[ 10 ]
+initial
+begin
+	alien7_wire_expected[10] = 1'bX;
+	alien7_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien7_wire[ 9 ]
+initial
+begin
+	alien7_wire_expected[9] = 1'bX;
+	alien7_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien7_wire[ 8 ]
+initial
+begin
+	alien7_wire_expected[8] = 1'bX;
+	alien7_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien7_wire[ 7 ]
+initial
+begin
+	alien7_wire_expected[7] = 1'bX;
+	alien7_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien7_wire[ 6 ]
+initial
+begin
+	alien7_wire_expected[6] = 1'bX;
+	alien7_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien7_wire[ 5 ]
+initial
+begin
+	alien7_wire_expected[5] = 1'bX;
+	alien7_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien7_wire[ 4 ]
+initial
+begin
+	alien7_wire_expected[4] = 1'bX;
+	alien7_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien7_wire[ 3 ]
+initial
+begin
+	alien7_wire_expected[3] = 1'bX;
+	alien7_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien7_wire[ 2 ]
+initial
+begin
+	alien7_wire_expected[2] = 1'bX;
+	alien7_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien7_wire[ 1 ]
+initial
+begin
+	alien7_wire_expected[1] = 1'bX;
+	alien7_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien7_wire[ 0 ]
+initial
+begin
+	alien7_wire_expected[0] = 1'bX;
+	alien7_wire_expected[0] = #999000 1'b0;
+end 
+// expected alien8_wire[ 15 ]
+initial
+begin
+	alien8_wire_expected[15] = 1'bX;
+	alien8_wire_expected[15] = #999000 1'b0;
+end 
+// expected alien8_wire[ 14 ]
+initial
+begin
+	alien8_wire_expected[14] = 1'bX;
+	alien8_wire_expected[14] = #999000 1'b0;
+end 
+// expected alien8_wire[ 13 ]
+initial
+begin
+	alien8_wire_expected[13] = 1'bX;
+	alien8_wire_expected[13] = #999000 1'b0;
+end 
+// expected alien8_wire[ 12 ]
+initial
+begin
+	alien8_wire_expected[12] = 1'bX;
+	alien8_wire_expected[12] = #999000 1'b0;
+end 
+// expected alien8_wire[ 11 ]
+initial
+begin
+	alien8_wire_expected[11] = 1'bX;
+	alien8_wire_expected[11] = #999000 1'b0;
+end 
+// expected alien8_wire[ 10 ]
+initial
+begin
+	alien8_wire_expected[10] = 1'bX;
+	alien8_wire_expected[10] = #999000 1'b0;
+end 
+// expected alien8_wire[ 9 ]
+initial
+begin
+	alien8_wire_expected[9] = 1'bX;
+	alien8_wire_expected[9] = #999000 1'b0;
+end 
+// expected alien8_wire[ 8 ]
+initial
+begin
+	alien8_wire_expected[8] = 1'bX;
+	alien8_wire_expected[8] = #999000 1'b0;
+end 
+// expected alien8_wire[ 7 ]
+initial
+begin
+	alien8_wire_expected[7] = 1'bX;
+	alien8_wire_expected[7] = #999000 1'b0;
+end 
+// expected alien8_wire[ 6 ]
+initial
+begin
+	alien8_wire_expected[6] = 1'bX;
+	alien8_wire_expected[6] = #999000 1'b0;
+end 
+// expected alien8_wire[ 5 ]
+initial
+begin
+	alien8_wire_expected[5] = 1'bX;
+	alien8_wire_expected[5] = #999000 1'b0;
+end 
+// expected alien8_wire[ 4 ]
+initial
+begin
+	alien8_wire_expected[4] = 1'bX;
+	alien8_wire_expected[4] = #999000 1'b0;
+end 
+// expected alien8_wire[ 3 ]
+initial
+begin
+	alien8_wire_expected[3] = 1'bX;
+	alien8_wire_expected[3] = #999000 1'b0;
+end 
+// expected alien8_wire[ 2 ]
+initial
+begin
+	alien8_wire_expected[2] = 1'bX;
+	alien8_wire_expected[2] = #999000 1'b0;
+end 
+// expected alien8_wire[ 1 ]
+initial
+begin
+	alien8_wire_expected[1] = 1'bX;
+	alien8_wire_expected[1] = #999000 1'b0;
+end 
+// expected alien8_wire[ 0 ]
+initial
+begin
+	alien8_wire_expected[0] = 1'bX;
+	alien8_wire_expected[0] = #999000 1'b0;
+end 
+
+// expected blank
+initial
+begin
+	blank_expected = 1'bX;
+	blank_expected = #999000 1'b0;
+end 
+// expected blue[ 7 ]
+initial
+begin
+	blue_expected[7] = 1'bX;
+	blue_expected[7] = #999000 1'b0;
+end 
+// expected blue[ 6 ]
+initial
+begin
+	blue_expected[6] = 1'bX;
+	blue_expected[6] = #999000 1'b0;
+end 
+// expected blue[ 5 ]
+initial
+begin
+	blue_expected[5] = 1'bX;
+	blue_expected[5] = #999000 1'b0;
+end 
+// expected blue[ 4 ]
+initial
+begin
+	blue_expected[4] = 1'bX;
+	blue_expected[4] = #999000 1'b0;
+end 
+// expected blue[ 3 ]
+initial
+begin
+	blue_expected[3] = 1'bX;
+	blue_expected[3] = #999000 1'b0;
+end 
+// expected blue[ 2 ]
+initial
+begin
+	blue_expected[2] = 1'bX;
+	blue_expected[2] = #999000 1'b0;
+end 
+// expected blue[ 1 ]
+initial
+begin
+	blue_expected[1] = 1'bX;
+	blue_expected[1] = #999000 1'b0;
+end 
+// expected blue[ 0 ]
+initial
+begin
+	blue_expected[0] = 1'bX;
+	blue_expected[0] = #999000 1'b0;
+end 
+
+// expected clk
+initial
+begin
+	clk_expected = 1'bX;
+	clk_expected = #999000 1'b0;
+end 
+// expected green[ 7 ]
+initial
+begin
+	green_expected[7] = 1'bX;
+	green_expected[7] = #999000 1'b0;
+end 
+// expected green[ 6 ]
+initial
+begin
+	green_expected[6] = 1'bX;
+	green_expected[6] = #999000 1'b0;
+end 
+// expected green[ 5 ]
+initial
+begin
+	green_expected[5] = 1'bX;
+	green_expected[5] = #999000 1'b0;
+end 
+// expected green[ 4 ]
+initial
+begin
+	green_expected[4] = 1'bX;
+	green_expected[4] = #999000 1'b0;
+end 
+// expected green[ 3 ]
+initial
+begin
+	green_expected[3] = 1'bX;
+	green_expected[3] = #999000 1'b0;
+end 
+// expected green[ 2 ]
+initial
+begin
+	green_expected[2] = 1'bX;
+	green_expected[2] = #999000 1'b0;
+end 
+// expected green[ 1 ]
+initial
+begin
+	green_expected[1] = 1'bX;
+	green_expected[1] = #999000 1'b0;
+end 
+// expected green[ 0 ]
+initial
+begin
+	green_expected[0] = 1'bX;
+	green_expected[0] = #999000 1'b0;
+end 
+
+// expected hsync
+initial
+begin
+	hsync_expected = 1'bX;
+	hsync_expected = #999000 1'b0;
+end 
+// expected red[ 7 ]
+initial
+begin
+	red_expected[7] = 1'bX;
+	red_expected[7] = #999000 1'b0;
+end 
+// expected red[ 6 ]
+initial
+begin
+	red_expected[6] = 1'bX;
+	red_expected[6] = #999000 1'b0;
+end 
+// expected red[ 5 ]
+initial
+begin
+	red_expected[5] = 1'bX;
+	red_expected[5] = #999000 1'b0;
+end 
+// expected red[ 4 ]
+initial
+begin
+	red_expected[4] = 1'bX;
+	red_expected[4] = #999000 1'b0;
+end 
+// expected red[ 3 ]
+initial
+begin
+	red_expected[3] = 1'bX;
+	red_expected[3] = #999000 1'b0;
+end 
+// expected red[ 2 ]
+initial
+begin
+	red_expected[2] = 1'bX;
+	red_expected[2] = #999000 1'b0;
+end 
+// expected red[ 1 ]
+initial
+begin
+	red_expected[1] = 1'bX;
+	red_expected[1] = #999000 1'b0;
+end 
+// expected red[ 0 ]
+initial
+begin
+	red_expected[0] = 1'bX;
+	red_expected[0] = #999000 1'b0;
+end 
+
+// expected sync
+initial
+begin
+	sync_expected = 1'bX;
+	sync_expected = #999000 1'b0;
+end 
+
+// expected vsync
+initial
+begin
+	vsync_expected = 1'bX;
+	vsync_expected = #999000 1'b0;
+end 
+// expected sample_total[ 2 ]
+initial
+begin
+	sample_total_expected[2] = 1'bX;
+	sample_total_expected[2] = #999000 1'b0;
+end 
+// expected sample_total[ 1 ]
+initial
+begin
+	sample_total_expected[1] = 1'bX;
+	sample_total_expected[1] = #999000 1'b0;
+end 
+// expected sample_total[ 0 ]
+initial
+begin
+	sample_total_expected[0] = 1'bX;
+	sample_total_expected[0] = #999000 1'b0;
+end 
+// generate trigger
+always @(alien1_wire_expected or alien1_wire or alien2_wire_expected or alien2_wire or alien3_wire_expected or alien3_wire or alien4_wire_expected or alien4_wire or alien5_wire_expected or alien5_wire or alien6_wire_expected or alien6_wire or alien7_wire_expected or alien7_wire or alien8_wire_expected or alien8_wire or blank_expected or blank or blue_expected or blue or clk_expected or clk or green_expected or green or hsync_expected or hsync or red_expected or red or sample_total_expected or sample_total or sync_expected or sync or vsync_expected or vsync)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected alien1_wire = %b | expected alien2_wire = %b | expected alien3_wire = %b | expected alien4_wire = %b | expected alien5_wire = %b | expected alien6_wire = %b | expected alien7_wire = %b | expected alien8_wire = %b | expected blank = %b | expected blue = %b | expected clk = %b | expected green = %b | expected hsync = %b | expected red = %b | expected sample_total = %b | expected sync = %b | expected vsync = %b | ",alien1_wire_expected_prev,alien2_wire_expected_prev,alien3_wire_expected_prev,alien4_wire_expected_prev,alien5_wire_expected_prev,alien6_wire_expected_prev,alien7_wire_expected_prev,alien8_wire_expected_prev,blank_expected_prev,blue_expected_prev,clk_expected_prev,green_expected_prev,hsync_expected_prev,red_expected_prev,sample_total_expected_prev,sync_expected_prev,vsync_expected_prev);
+	$display("| real alien1_wire = %b | real alien2_wire = %b | real alien3_wire = %b | real alien4_wire = %b | real alien5_wire = %b | real alien6_wire = %b | real alien7_wire = %b | real alien8_wire = %b | real blank = %b | real blue = %b | real clk = %b | real green = %b | real hsync = %b | real red = %b | real sample_total = %b | real sync = %b | real vsync = %b | ",alien1_wire_prev,alien2_wire_prev,alien3_wire_prev,alien4_wire_prev,alien5_wire_prev,alien6_wire_prev,alien7_wire_prev,alien8_wire_prev,blank_prev,blue_prev,clk_prev,green_prev,hsync_prev,red_prev,sample_total_prev,sync_prev,vsync_prev);
+`endif
+	if (
+		( alien1_wire_expected_prev[0] !== 1'bx ) && ( alien1_wire_prev[0] !== alien1_wire_expected_prev[0] )
+		&& ((alien1_wire_expected_prev[0] !== last_alien1_wire_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[0] = alien1_wire_expected_prev[0];
+	end
+	if (
+		( alien1_wire_expected_prev[1] !== 1'bx ) && ( alien1_wire_prev[1] !== alien1_wire_expected_prev[1] )
+		&& ((alien1_wire_expected_prev[1] !== last_alien1_wire_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[1] = alien1_wire_expected_prev[1];
+	end
+	if (
+		( alien1_wire_expected_prev[2] !== 1'bx ) && ( alien1_wire_prev[2] !== alien1_wire_expected_prev[2] )
+		&& ((alien1_wire_expected_prev[2] !== last_alien1_wire_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[2] = alien1_wire_expected_prev[2];
+	end
+	if (
+		( alien1_wire_expected_prev[3] !== 1'bx ) && ( alien1_wire_prev[3] !== alien1_wire_expected_prev[3] )
+		&& ((alien1_wire_expected_prev[3] !== last_alien1_wire_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[3] = alien1_wire_expected_prev[3];
+	end
+	if (
+		( alien1_wire_expected_prev[4] !== 1'bx ) && ( alien1_wire_prev[4] !== alien1_wire_expected_prev[4] )
+		&& ((alien1_wire_expected_prev[4] !== last_alien1_wire_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[4] = alien1_wire_expected_prev[4];
+	end
+	if (
+		( alien1_wire_expected_prev[5] !== 1'bx ) && ( alien1_wire_prev[5] !== alien1_wire_expected_prev[5] )
+		&& ((alien1_wire_expected_prev[5] !== last_alien1_wire_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[5] = alien1_wire_expected_prev[5];
+	end
+	if (
+		( alien1_wire_expected_prev[6] !== 1'bx ) && ( alien1_wire_prev[6] !== alien1_wire_expected_prev[6] )
+		&& ((alien1_wire_expected_prev[6] !== last_alien1_wire_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[6] = alien1_wire_expected_prev[6];
+	end
+	if (
+		( alien1_wire_expected_prev[7] !== 1'bx ) && ( alien1_wire_prev[7] !== alien1_wire_expected_prev[7] )
+		&& ((alien1_wire_expected_prev[7] !== last_alien1_wire_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[7] = alien1_wire_expected_prev[7];
+	end
+	if (
+		( alien1_wire_expected_prev[8] !== 1'bx ) && ( alien1_wire_prev[8] !== alien1_wire_expected_prev[8] )
+		&& ((alien1_wire_expected_prev[8] !== last_alien1_wire_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[8] = alien1_wire_expected_prev[8];
+	end
+	if (
+		( alien1_wire_expected_prev[9] !== 1'bx ) && ( alien1_wire_prev[9] !== alien1_wire_expected_prev[9] )
+		&& ((alien1_wire_expected_prev[9] !== last_alien1_wire_exp[9]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[9] = alien1_wire_expected_prev[9];
+	end
+	if (
+		( alien1_wire_expected_prev[10] !== 1'bx ) && ( alien1_wire_prev[10] !== alien1_wire_expected_prev[10] )
+		&& ((alien1_wire_expected_prev[10] !== last_alien1_wire_exp[10]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[10] = alien1_wire_expected_prev[10];
+	end
+	if (
+		( alien1_wire_expected_prev[11] !== 1'bx ) && ( alien1_wire_prev[11] !== alien1_wire_expected_prev[11] )
+		&& ((alien1_wire_expected_prev[11] !== last_alien1_wire_exp[11]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[11] = alien1_wire_expected_prev[11];
+	end
+	if (
+		( alien1_wire_expected_prev[12] !== 1'bx ) && ( alien1_wire_prev[12] !== alien1_wire_expected_prev[12] )
+		&& ((alien1_wire_expected_prev[12] !== last_alien1_wire_exp[12]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[12] = alien1_wire_expected_prev[12];
+	end
+	if (
+		( alien1_wire_expected_prev[13] !== 1'bx ) && ( alien1_wire_prev[13] !== alien1_wire_expected_prev[13] )
+		&& ((alien1_wire_expected_prev[13] !== last_alien1_wire_exp[13]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[13] = alien1_wire_expected_prev[13];
+	end
+	if (
+		( alien1_wire_expected_prev[14] !== 1'bx ) && ( alien1_wire_prev[14] !== alien1_wire_expected_prev[14] )
+		&& ((alien1_wire_expected_prev[14] !== last_alien1_wire_exp[14]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[14] = alien1_wire_expected_prev[14];
+	end
+	if (
+		( alien1_wire_expected_prev[15] !== 1'bx ) && ( alien1_wire_prev[15] !== alien1_wire_expected_prev[15] )
+		&& ((alien1_wire_expected_prev[15] !== last_alien1_wire_exp[15]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien1_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien1_wire_expected_prev);
+		$display ("     Real value = %b", alien1_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alien1_wire_exp[15] = alien1_wire_expected_prev[15];
+	end
+	if (
+		( alien2_wire_expected_prev[0] !== 1'bx ) && ( alien2_wire_prev[0] !== alien2_wire_expected_prev[0] )
+		&& ((alien2_wire_expected_prev[0] !== last_alien2_wire_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[0] = alien2_wire_expected_prev[0];
+	end
+	if (
+		( alien2_wire_expected_prev[1] !== 1'bx ) && ( alien2_wire_prev[1] !== alien2_wire_expected_prev[1] )
+		&& ((alien2_wire_expected_prev[1] !== last_alien2_wire_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[1] = alien2_wire_expected_prev[1];
+	end
+	if (
+		( alien2_wire_expected_prev[2] !== 1'bx ) && ( alien2_wire_prev[2] !== alien2_wire_expected_prev[2] )
+		&& ((alien2_wire_expected_prev[2] !== last_alien2_wire_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[2] = alien2_wire_expected_prev[2];
+	end
+	if (
+		( alien2_wire_expected_prev[3] !== 1'bx ) && ( alien2_wire_prev[3] !== alien2_wire_expected_prev[3] )
+		&& ((alien2_wire_expected_prev[3] !== last_alien2_wire_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[3] = alien2_wire_expected_prev[3];
+	end
+	if (
+		( alien2_wire_expected_prev[4] !== 1'bx ) && ( alien2_wire_prev[4] !== alien2_wire_expected_prev[4] )
+		&& ((alien2_wire_expected_prev[4] !== last_alien2_wire_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[4] = alien2_wire_expected_prev[4];
+	end
+	if (
+		( alien2_wire_expected_prev[5] !== 1'bx ) && ( alien2_wire_prev[5] !== alien2_wire_expected_prev[5] )
+		&& ((alien2_wire_expected_prev[5] !== last_alien2_wire_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[5] = alien2_wire_expected_prev[5];
+	end
+	if (
+		( alien2_wire_expected_prev[6] !== 1'bx ) && ( alien2_wire_prev[6] !== alien2_wire_expected_prev[6] )
+		&& ((alien2_wire_expected_prev[6] !== last_alien2_wire_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[6] = alien2_wire_expected_prev[6];
+	end
+	if (
+		( alien2_wire_expected_prev[7] !== 1'bx ) && ( alien2_wire_prev[7] !== alien2_wire_expected_prev[7] )
+		&& ((alien2_wire_expected_prev[7] !== last_alien2_wire_exp[7]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[7] = alien2_wire_expected_prev[7];
+	end
+	if (
+		( alien2_wire_expected_prev[8] !== 1'bx ) && ( alien2_wire_prev[8] !== alien2_wire_expected_prev[8] )
+		&& ((alien2_wire_expected_prev[8] !== last_alien2_wire_exp[8]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[8] = alien2_wire_expected_prev[8];
+	end
+	if (
+		( alien2_wire_expected_prev[9] !== 1'bx ) && ( alien2_wire_prev[9] !== alien2_wire_expected_prev[9] )
+		&& ((alien2_wire_expected_prev[9] !== last_alien2_wire_exp[9]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[9] = alien2_wire_expected_prev[9];
+	end
+	if (
+		( alien2_wire_expected_prev[10] !== 1'bx ) && ( alien2_wire_prev[10] !== alien2_wire_expected_prev[10] )
+		&& ((alien2_wire_expected_prev[10] !== last_alien2_wire_exp[10]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[10] = alien2_wire_expected_prev[10];
+	end
+	if (
+		( alien2_wire_expected_prev[11] !== 1'bx ) && ( alien2_wire_prev[11] !== alien2_wire_expected_prev[11] )
+		&& ((alien2_wire_expected_prev[11] !== last_alien2_wire_exp[11]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[11] = alien2_wire_expected_prev[11];
+	end
+	if (
+		( alien2_wire_expected_prev[12] !== 1'bx ) && ( alien2_wire_prev[12] !== alien2_wire_expected_prev[12] )
+		&& ((alien2_wire_expected_prev[12] !== last_alien2_wire_exp[12]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[12] = alien2_wire_expected_prev[12];
+	end
+	if (
+		( alien2_wire_expected_prev[13] !== 1'bx ) && ( alien2_wire_prev[13] !== alien2_wire_expected_prev[13] )
+		&& ((alien2_wire_expected_prev[13] !== last_alien2_wire_exp[13]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[13] = alien2_wire_expected_prev[13];
+	end
+	if (
+		( alien2_wire_expected_prev[14] !== 1'bx ) && ( alien2_wire_prev[14] !== alien2_wire_expected_prev[14] )
+		&& ((alien2_wire_expected_prev[14] !== last_alien2_wire_exp[14]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[14] = alien2_wire_expected_prev[14];
+	end
+	if (
+		( alien2_wire_expected_prev[15] !== 1'bx ) && ( alien2_wire_prev[15] !== alien2_wire_expected_prev[15] )
+		&& ((alien2_wire_expected_prev[15] !== last_alien2_wire_exp[15]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien2_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien2_wire_expected_prev);
+		$display ("     Real value = %b", alien2_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_alien2_wire_exp[15] = alien2_wire_expected_prev[15];
+	end
+	if (
+		( alien3_wire_expected_prev[0] !== 1'bx ) && ( alien3_wire_prev[0] !== alien3_wire_expected_prev[0] )
+		&& ((alien3_wire_expected_prev[0] !== last_alien3_wire_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[0] = alien3_wire_expected_prev[0];
+	end
+	if (
+		( alien3_wire_expected_prev[1] !== 1'bx ) && ( alien3_wire_prev[1] !== alien3_wire_expected_prev[1] )
+		&& ((alien3_wire_expected_prev[1] !== last_alien3_wire_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[1] = alien3_wire_expected_prev[1];
+	end
+	if (
+		( alien3_wire_expected_prev[2] !== 1'bx ) && ( alien3_wire_prev[2] !== alien3_wire_expected_prev[2] )
+		&& ((alien3_wire_expected_prev[2] !== last_alien3_wire_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[2] = alien3_wire_expected_prev[2];
+	end
+	if (
+		( alien3_wire_expected_prev[3] !== 1'bx ) && ( alien3_wire_prev[3] !== alien3_wire_expected_prev[3] )
+		&& ((alien3_wire_expected_prev[3] !== last_alien3_wire_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[3] = alien3_wire_expected_prev[3];
+	end
+	if (
+		( alien3_wire_expected_prev[4] !== 1'bx ) && ( alien3_wire_prev[4] !== alien3_wire_expected_prev[4] )
+		&& ((alien3_wire_expected_prev[4] !== last_alien3_wire_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[4] = alien3_wire_expected_prev[4];
+	end
+	if (
+		( alien3_wire_expected_prev[5] !== 1'bx ) && ( alien3_wire_prev[5] !== alien3_wire_expected_prev[5] )
+		&& ((alien3_wire_expected_prev[5] !== last_alien3_wire_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[5] = alien3_wire_expected_prev[5];
+	end
+	if (
+		( alien3_wire_expected_prev[6] !== 1'bx ) && ( alien3_wire_prev[6] !== alien3_wire_expected_prev[6] )
+		&& ((alien3_wire_expected_prev[6] !== last_alien3_wire_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[6] = alien3_wire_expected_prev[6];
+	end
+	if (
+		( alien3_wire_expected_prev[7] !== 1'bx ) && ( alien3_wire_prev[7] !== alien3_wire_expected_prev[7] )
+		&& ((alien3_wire_expected_prev[7] !== last_alien3_wire_exp[7]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[7] = alien3_wire_expected_prev[7];
+	end
+	if (
+		( alien3_wire_expected_prev[8] !== 1'bx ) && ( alien3_wire_prev[8] !== alien3_wire_expected_prev[8] )
+		&& ((alien3_wire_expected_prev[8] !== last_alien3_wire_exp[8]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[8] = alien3_wire_expected_prev[8];
+	end
+	if (
+		( alien3_wire_expected_prev[9] !== 1'bx ) && ( alien3_wire_prev[9] !== alien3_wire_expected_prev[9] )
+		&& ((alien3_wire_expected_prev[9] !== last_alien3_wire_exp[9]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[9] = alien3_wire_expected_prev[9];
+	end
+	if (
+		( alien3_wire_expected_prev[10] !== 1'bx ) && ( alien3_wire_prev[10] !== alien3_wire_expected_prev[10] )
+		&& ((alien3_wire_expected_prev[10] !== last_alien3_wire_exp[10]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[10] = alien3_wire_expected_prev[10];
+	end
+	if (
+		( alien3_wire_expected_prev[11] !== 1'bx ) && ( alien3_wire_prev[11] !== alien3_wire_expected_prev[11] )
+		&& ((alien3_wire_expected_prev[11] !== last_alien3_wire_exp[11]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[11] = alien3_wire_expected_prev[11];
+	end
+	if (
+		( alien3_wire_expected_prev[12] !== 1'bx ) && ( alien3_wire_prev[12] !== alien3_wire_expected_prev[12] )
+		&& ((alien3_wire_expected_prev[12] !== last_alien3_wire_exp[12]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[12] = alien3_wire_expected_prev[12];
+	end
+	if (
+		( alien3_wire_expected_prev[13] !== 1'bx ) && ( alien3_wire_prev[13] !== alien3_wire_expected_prev[13] )
+		&& ((alien3_wire_expected_prev[13] !== last_alien3_wire_exp[13]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[13] = alien3_wire_expected_prev[13];
+	end
+	if (
+		( alien3_wire_expected_prev[14] !== 1'bx ) && ( alien3_wire_prev[14] !== alien3_wire_expected_prev[14] )
+		&& ((alien3_wire_expected_prev[14] !== last_alien3_wire_exp[14]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[14] = alien3_wire_expected_prev[14];
+	end
+	if (
+		( alien3_wire_expected_prev[15] !== 1'bx ) && ( alien3_wire_prev[15] !== alien3_wire_expected_prev[15] )
+		&& ((alien3_wire_expected_prev[15] !== last_alien3_wire_exp[15]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien3_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien3_wire_expected_prev);
+		$display ("     Real value = %b", alien3_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_alien3_wire_exp[15] = alien3_wire_expected_prev[15];
+	end
+	if (
+		( alien4_wire_expected_prev[0] !== 1'bx ) && ( alien4_wire_prev[0] !== alien4_wire_expected_prev[0] )
+		&& ((alien4_wire_expected_prev[0] !== last_alien4_wire_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[0] = alien4_wire_expected_prev[0];
+	end
+	if (
+		( alien4_wire_expected_prev[1] !== 1'bx ) && ( alien4_wire_prev[1] !== alien4_wire_expected_prev[1] )
+		&& ((alien4_wire_expected_prev[1] !== last_alien4_wire_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[1] = alien4_wire_expected_prev[1];
+	end
+	if (
+		( alien4_wire_expected_prev[2] !== 1'bx ) && ( alien4_wire_prev[2] !== alien4_wire_expected_prev[2] )
+		&& ((alien4_wire_expected_prev[2] !== last_alien4_wire_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[2] = alien4_wire_expected_prev[2];
+	end
+	if (
+		( alien4_wire_expected_prev[3] !== 1'bx ) && ( alien4_wire_prev[3] !== alien4_wire_expected_prev[3] )
+		&& ((alien4_wire_expected_prev[3] !== last_alien4_wire_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[3] = alien4_wire_expected_prev[3];
+	end
+	if (
+		( alien4_wire_expected_prev[4] !== 1'bx ) && ( alien4_wire_prev[4] !== alien4_wire_expected_prev[4] )
+		&& ((alien4_wire_expected_prev[4] !== last_alien4_wire_exp[4]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[4] = alien4_wire_expected_prev[4];
+	end
+	if (
+		( alien4_wire_expected_prev[5] !== 1'bx ) && ( alien4_wire_prev[5] !== alien4_wire_expected_prev[5] )
+		&& ((alien4_wire_expected_prev[5] !== last_alien4_wire_exp[5]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[5] = alien4_wire_expected_prev[5];
+	end
+	if (
+		( alien4_wire_expected_prev[6] !== 1'bx ) && ( alien4_wire_prev[6] !== alien4_wire_expected_prev[6] )
+		&& ((alien4_wire_expected_prev[6] !== last_alien4_wire_exp[6]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[6] = alien4_wire_expected_prev[6];
+	end
+	if (
+		( alien4_wire_expected_prev[7] !== 1'bx ) && ( alien4_wire_prev[7] !== alien4_wire_expected_prev[7] )
+		&& ((alien4_wire_expected_prev[7] !== last_alien4_wire_exp[7]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[7] = alien4_wire_expected_prev[7];
+	end
+	if (
+		( alien4_wire_expected_prev[8] !== 1'bx ) && ( alien4_wire_prev[8] !== alien4_wire_expected_prev[8] )
+		&& ((alien4_wire_expected_prev[8] !== last_alien4_wire_exp[8]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[8] = alien4_wire_expected_prev[8];
+	end
+	if (
+		( alien4_wire_expected_prev[9] !== 1'bx ) && ( alien4_wire_prev[9] !== alien4_wire_expected_prev[9] )
+		&& ((alien4_wire_expected_prev[9] !== last_alien4_wire_exp[9]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[9] = alien4_wire_expected_prev[9];
+	end
+	if (
+		( alien4_wire_expected_prev[10] !== 1'bx ) && ( alien4_wire_prev[10] !== alien4_wire_expected_prev[10] )
+		&& ((alien4_wire_expected_prev[10] !== last_alien4_wire_exp[10]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[10] = alien4_wire_expected_prev[10];
+	end
+	if (
+		( alien4_wire_expected_prev[11] !== 1'bx ) && ( alien4_wire_prev[11] !== alien4_wire_expected_prev[11] )
+		&& ((alien4_wire_expected_prev[11] !== last_alien4_wire_exp[11]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[11] = alien4_wire_expected_prev[11];
+	end
+	if (
+		( alien4_wire_expected_prev[12] !== 1'bx ) && ( alien4_wire_prev[12] !== alien4_wire_expected_prev[12] )
+		&& ((alien4_wire_expected_prev[12] !== last_alien4_wire_exp[12]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[12] = alien4_wire_expected_prev[12];
+	end
+	if (
+		( alien4_wire_expected_prev[13] !== 1'bx ) && ( alien4_wire_prev[13] !== alien4_wire_expected_prev[13] )
+		&& ((alien4_wire_expected_prev[13] !== last_alien4_wire_exp[13]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[13] = alien4_wire_expected_prev[13];
+	end
+	if (
+		( alien4_wire_expected_prev[14] !== 1'bx ) && ( alien4_wire_prev[14] !== alien4_wire_expected_prev[14] )
+		&& ((alien4_wire_expected_prev[14] !== last_alien4_wire_exp[14]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[14] = alien4_wire_expected_prev[14];
+	end
+	if (
+		( alien4_wire_expected_prev[15] !== 1'bx ) && ( alien4_wire_prev[15] !== alien4_wire_expected_prev[15] )
+		&& ((alien4_wire_expected_prev[15] !== last_alien4_wire_exp[15]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien4_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien4_wire_expected_prev);
+		$display ("     Real value = %b", alien4_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_alien4_wire_exp[15] = alien4_wire_expected_prev[15];
+	end
+	if (
+		( alien5_wire_expected_prev[0] !== 1'bx ) && ( alien5_wire_prev[0] !== alien5_wire_expected_prev[0] )
+		&& ((alien5_wire_expected_prev[0] !== last_alien5_wire_exp[0]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[0] = alien5_wire_expected_prev[0];
+	end
+	if (
+		( alien5_wire_expected_prev[1] !== 1'bx ) && ( alien5_wire_prev[1] !== alien5_wire_expected_prev[1] )
+		&& ((alien5_wire_expected_prev[1] !== last_alien5_wire_exp[1]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[1] = alien5_wire_expected_prev[1];
+	end
+	if (
+		( alien5_wire_expected_prev[2] !== 1'bx ) && ( alien5_wire_prev[2] !== alien5_wire_expected_prev[2] )
+		&& ((alien5_wire_expected_prev[2] !== last_alien5_wire_exp[2]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[2] = alien5_wire_expected_prev[2];
+	end
+	if (
+		( alien5_wire_expected_prev[3] !== 1'bx ) && ( alien5_wire_prev[3] !== alien5_wire_expected_prev[3] )
+		&& ((alien5_wire_expected_prev[3] !== last_alien5_wire_exp[3]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[3] = alien5_wire_expected_prev[3];
+	end
+	if (
+		( alien5_wire_expected_prev[4] !== 1'bx ) && ( alien5_wire_prev[4] !== alien5_wire_expected_prev[4] )
+		&& ((alien5_wire_expected_prev[4] !== last_alien5_wire_exp[4]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[4] = alien5_wire_expected_prev[4];
+	end
+	if (
+		( alien5_wire_expected_prev[5] !== 1'bx ) && ( alien5_wire_prev[5] !== alien5_wire_expected_prev[5] )
+		&& ((alien5_wire_expected_prev[5] !== last_alien5_wire_exp[5]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[5] = alien5_wire_expected_prev[5];
+	end
+	if (
+		( alien5_wire_expected_prev[6] !== 1'bx ) && ( alien5_wire_prev[6] !== alien5_wire_expected_prev[6] )
+		&& ((alien5_wire_expected_prev[6] !== last_alien5_wire_exp[6]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[6] = alien5_wire_expected_prev[6];
+	end
+	if (
+		( alien5_wire_expected_prev[7] !== 1'bx ) && ( alien5_wire_prev[7] !== alien5_wire_expected_prev[7] )
+		&& ((alien5_wire_expected_prev[7] !== last_alien5_wire_exp[7]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[7] = alien5_wire_expected_prev[7];
+	end
+	if (
+		( alien5_wire_expected_prev[8] !== 1'bx ) && ( alien5_wire_prev[8] !== alien5_wire_expected_prev[8] )
+		&& ((alien5_wire_expected_prev[8] !== last_alien5_wire_exp[8]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[8] = alien5_wire_expected_prev[8];
+	end
+	if (
+		( alien5_wire_expected_prev[9] !== 1'bx ) && ( alien5_wire_prev[9] !== alien5_wire_expected_prev[9] )
+		&& ((alien5_wire_expected_prev[9] !== last_alien5_wire_exp[9]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[9] = alien5_wire_expected_prev[9];
+	end
+	if (
+		( alien5_wire_expected_prev[10] !== 1'bx ) && ( alien5_wire_prev[10] !== alien5_wire_expected_prev[10] )
+		&& ((alien5_wire_expected_prev[10] !== last_alien5_wire_exp[10]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[10] = alien5_wire_expected_prev[10];
+	end
+	if (
+		( alien5_wire_expected_prev[11] !== 1'bx ) && ( alien5_wire_prev[11] !== alien5_wire_expected_prev[11] )
+		&& ((alien5_wire_expected_prev[11] !== last_alien5_wire_exp[11]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[11] = alien5_wire_expected_prev[11];
+	end
+	if (
+		( alien5_wire_expected_prev[12] !== 1'bx ) && ( alien5_wire_prev[12] !== alien5_wire_expected_prev[12] )
+		&& ((alien5_wire_expected_prev[12] !== last_alien5_wire_exp[12]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[12] = alien5_wire_expected_prev[12];
+	end
+	if (
+		( alien5_wire_expected_prev[13] !== 1'bx ) && ( alien5_wire_prev[13] !== alien5_wire_expected_prev[13] )
+		&& ((alien5_wire_expected_prev[13] !== last_alien5_wire_exp[13]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[13] = alien5_wire_expected_prev[13];
+	end
+	if (
+		( alien5_wire_expected_prev[14] !== 1'bx ) && ( alien5_wire_prev[14] !== alien5_wire_expected_prev[14] )
+		&& ((alien5_wire_expected_prev[14] !== last_alien5_wire_exp[14]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[14] = alien5_wire_expected_prev[14];
+	end
+	if (
+		( alien5_wire_expected_prev[15] !== 1'bx ) && ( alien5_wire_prev[15] !== alien5_wire_expected_prev[15] )
+		&& ((alien5_wire_expected_prev[15] !== last_alien5_wire_exp[15]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien5_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien5_wire_expected_prev);
+		$display ("     Real value = %b", alien5_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_alien5_wire_exp[15] = alien5_wire_expected_prev[15];
+	end
+	if (
+		( alien6_wire_expected_prev[0] !== 1'bx ) && ( alien6_wire_prev[0] !== alien6_wire_expected_prev[0] )
+		&& ((alien6_wire_expected_prev[0] !== last_alien6_wire_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[0] = alien6_wire_expected_prev[0];
+	end
+	if (
+		( alien6_wire_expected_prev[1] !== 1'bx ) && ( alien6_wire_prev[1] !== alien6_wire_expected_prev[1] )
+		&& ((alien6_wire_expected_prev[1] !== last_alien6_wire_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[1] = alien6_wire_expected_prev[1];
+	end
+	if (
+		( alien6_wire_expected_prev[2] !== 1'bx ) && ( alien6_wire_prev[2] !== alien6_wire_expected_prev[2] )
+		&& ((alien6_wire_expected_prev[2] !== last_alien6_wire_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[2] = alien6_wire_expected_prev[2];
+	end
+	if (
+		( alien6_wire_expected_prev[3] !== 1'bx ) && ( alien6_wire_prev[3] !== alien6_wire_expected_prev[3] )
+		&& ((alien6_wire_expected_prev[3] !== last_alien6_wire_exp[3]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[3] = alien6_wire_expected_prev[3];
+	end
+	if (
+		( alien6_wire_expected_prev[4] !== 1'bx ) && ( alien6_wire_prev[4] !== alien6_wire_expected_prev[4] )
+		&& ((alien6_wire_expected_prev[4] !== last_alien6_wire_exp[4]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[4] = alien6_wire_expected_prev[4];
+	end
+	if (
+		( alien6_wire_expected_prev[5] !== 1'bx ) && ( alien6_wire_prev[5] !== alien6_wire_expected_prev[5] )
+		&& ((alien6_wire_expected_prev[5] !== last_alien6_wire_exp[5]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[5] = alien6_wire_expected_prev[5];
+	end
+	if (
+		( alien6_wire_expected_prev[6] !== 1'bx ) && ( alien6_wire_prev[6] !== alien6_wire_expected_prev[6] )
+		&& ((alien6_wire_expected_prev[6] !== last_alien6_wire_exp[6]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[6] = alien6_wire_expected_prev[6];
+	end
+	if (
+		( alien6_wire_expected_prev[7] !== 1'bx ) && ( alien6_wire_prev[7] !== alien6_wire_expected_prev[7] )
+		&& ((alien6_wire_expected_prev[7] !== last_alien6_wire_exp[7]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[7] = alien6_wire_expected_prev[7];
+	end
+	if (
+		( alien6_wire_expected_prev[8] !== 1'bx ) && ( alien6_wire_prev[8] !== alien6_wire_expected_prev[8] )
+		&& ((alien6_wire_expected_prev[8] !== last_alien6_wire_exp[8]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[8] = alien6_wire_expected_prev[8];
+	end
+	if (
+		( alien6_wire_expected_prev[9] !== 1'bx ) && ( alien6_wire_prev[9] !== alien6_wire_expected_prev[9] )
+		&& ((alien6_wire_expected_prev[9] !== last_alien6_wire_exp[9]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[9] = alien6_wire_expected_prev[9];
+	end
+	if (
+		( alien6_wire_expected_prev[10] !== 1'bx ) && ( alien6_wire_prev[10] !== alien6_wire_expected_prev[10] )
+		&& ((alien6_wire_expected_prev[10] !== last_alien6_wire_exp[10]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[10] = alien6_wire_expected_prev[10];
+	end
+	if (
+		( alien6_wire_expected_prev[11] !== 1'bx ) && ( alien6_wire_prev[11] !== alien6_wire_expected_prev[11] )
+		&& ((alien6_wire_expected_prev[11] !== last_alien6_wire_exp[11]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[11] = alien6_wire_expected_prev[11];
+	end
+	if (
+		( alien6_wire_expected_prev[12] !== 1'bx ) && ( alien6_wire_prev[12] !== alien6_wire_expected_prev[12] )
+		&& ((alien6_wire_expected_prev[12] !== last_alien6_wire_exp[12]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[12] = alien6_wire_expected_prev[12];
+	end
+	if (
+		( alien6_wire_expected_prev[13] !== 1'bx ) && ( alien6_wire_prev[13] !== alien6_wire_expected_prev[13] )
+		&& ((alien6_wire_expected_prev[13] !== last_alien6_wire_exp[13]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[13] = alien6_wire_expected_prev[13];
+	end
+	if (
+		( alien6_wire_expected_prev[14] !== 1'bx ) && ( alien6_wire_prev[14] !== alien6_wire_expected_prev[14] )
+		&& ((alien6_wire_expected_prev[14] !== last_alien6_wire_exp[14]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[14] = alien6_wire_expected_prev[14];
+	end
+	if (
+		( alien6_wire_expected_prev[15] !== 1'bx ) && ( alien6_wire_prev[15] !== alien6_wire_expected_prev[15] )
+		&& ((alien6_wire_expected_prev[15] !== last_alien6_wire_exp[15]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien6_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien6_wire_expected_prev);
+		$display ("     Real value = %b", alien6_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_alien6_wire_exp[15] = alien6_wire_expected_prev[15];
+	end
+	if (
+		( alien7_wire_expected_prev[0] !== 1'bx ) && ( alien7_wire_prev[0] !== alien7_wire_expected_prev[0] )
+		&& ((alien7_wire_expected_prev[0] !== last_alien7_wire_exp[0]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[0] = alien7_wire_expected_prev[0];
+	end
+	if (
+		( alien7_wire_expected_prev[1] !== 1'bx ) && ( alien7_wire_prev[1] !== alien7_wire_expected_prev[1] )
+		&& ((alien7_wire_expected_prev[1] !== last_alien7_wire_exp[1]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[1] = alien7_wire_expected_prev[1];
+	end
+	if (
+		( alien7_wire_expected_prev[2] !== 1'bx ) && ( alien7_wire_prev[2] !== alien7_wire_expected_prev[2] )
+		&& ((alien7_wire_expected_prev[2] !== last_alien7_wire_exp[2]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[2] = alien7_wire_expected_prev[2];
+	end
+	if (
+		( alien7_wire_expected_prev[3] !== 1'bx ) && ( alien7_wire_prev[3] !== alien7_wire_expected_prev[3] )
+		&& ((alien7_wire_expected_prev[3] !== last_alien7_wire_exp[3]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[3] = alien7_wire_expected_prev[3];
+	end
+	if (
+		( alien7_wire_expected_prev[4] !== 1'bx ) && ( alien7_wire_prev[4] !== alien7_wire_expected_prev[4] )
+		&& ((alien7_wire_expected_prev[4] !== last_alien7_wire_exp[4]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[4] = alien7_wire_expected_prev[4];
+	end
+	if (
+		( alien7_wire_expected_prev[5] !== 1'bx ) && ( alien7_wire_prev[5] !== alien7_wire_expected_prev[5] )
+		&& ((alien7_wire_expected_prev[5] !== last_alien7_wire_exp[5]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[5] = alien7_wire_expected_prev[5];
+	end
+	if (
+		( alien7_wire_expected_prev[6] !== 1'bx ) && ( alien7_wire_prev[6] !== alien7_wire_expected_prev[6] )
+		&& ((alien7_wire_expected_prev[6] !== last_alien7_wire_exp[6]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[6] = alien7_wire_expected_prev[6];
+	end
+	if (
+		( alien7_wire_expected_prev[7] !== 1'bx ) && ( alien7_wire_prev[7] !== alien7_wire_expected_prev[7] )
+		&& ((alien7_wire_expected_prev[7] !== last_alien7_wire_exp[7]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[7] = alien7_wire_expected_prev[7];
+	end
+	if (
+		( alien7_wire_expected_prev[8] !== 1'bx ) && ( alien7_wire_prev[8] !== alien7_wire_expected_prev[8] )
+		&& ((alien7_wire_expected_prev[8] !== last_alien7_wire_exp[8]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[8] = alien7_wire_expected_prev[8];
+	end
+	if (
+		( alien7_wire_expected_prev[9] !== 1'bx ) && ( alien7_wire_prev[9] !== alien7_wire_expected_prev[9] )
+		&& ((alien7_wire_expected_prev[9] !== last_alien7_wire_exp[9]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[9] = alien7_wire_expected_prev[9];
+	end
+	if (
+		( alien7_wire_expected_prev[10] !== 1'bx ) && ( alien7_wire_prev[10] !== alien7_wire_expected_prev[10] )
+		&& ((alien7_wire_expected_prev[10] !== last_alien7_wire_exp[10]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[10] = alien7_wire_expected_prev[10];
+	end
+	if (
+		( alien7_wire_expected_prev[11] !== 1'bx ) && ( alien7_wire_prev[11] !== alien7_wire_expected_prev[11] )
+		&& ((alien7_wire_expected_prev[11] !== last_alien7_wire_exp[11]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[11] = alien7_wire_expected_prev[11];
+	end
+	if (
+		( alien7_wire_expected_prev[12] !== 1'bx ) && ( alien7_wire_prev[12] !== alien7_wire_expected_prev[12] )
+		&& ((alien7_wire_expected_prev[12] !== last_alien7_wire_exp[12]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[12] = alien7_wire_expected_prev[12];
+	end
+	if (
+		( alien7_wire_expected_prev[13] !== 1'bx ) && ( alien7_wire_prev[13] !== alien7_wire_expected_prev[13] )
+		&& ((alien7_wire_expected_prev[13] !== last_alien7_wire_exp[13]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[13] = alien7_wire_expected_prev[13];
+	end
+	if (
+		( alien7_wire_expected_prev[14] !== 1'bx ) && ( alien7_wire_prev[14] !== alien7_wire_expected_prev[14] )
+		&& ((alien7_wire_expected_prev[14] !== last_alien7_wire_exp[14]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[14] = alien7_wire_expected_prev[14];
+	end
+	if (
+		( alien7_wire_expected_prev[15] !== 1'bx ) && ( alien7_wire_prev[15] !== alien7_wire_expected_prev[15] )
+		&& ((alien7_wire_expected_prev[15] !== last_alien7_wire_exp[15]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien7_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien7_wire_expected_prev);
+		$display ("     Real value = %b", alien7_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_alien7_wire_exp[15] = alien7_wire_expected_prev[15];
+	end
+	if (
+		( alien8_wire_expected_prev[0] !== 1'bx ) && ( alien8_wire_prev[0] !== alien8_wire_expected_prev[0] )
+		&& ((alien8_wire_expected_prev[0] !== last_alien8_wire_exp[0]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[0] = alien8_wire_expected_prev[0];
+	end
+	if (
+		( alien8_wire_expected_prev[1] !== 1'bx ) && ( alien8_wire_prev[1] !== alien8_wire_expected_prev[1] )
+		&& ((alien8_wire_expected_prev[1] !== last_alien8_wire_exp[1]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[1] = alien8_wire_expected_prev[1];
+	end
+	if (
+		( alien8_wire_expected_prev[2] !== 1'bx ) && ( alien8_wire_prev[2] !== alien8_wire_expected_prev[2] )
+		&& ((alien8_wire_expected_prev[2] !== last_alien8_wire_exp[2]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[2] = alien8_wire_expected_prev[2];
+	end
+	if (
+		( alien8_wire_expected_prev[3] !== 1'bx ) && ( alien8_wire_prev[3] !== alien8_wire_expected_prev[3] )
+		&& ((alien8_wire_expected_prev[3] !== last_alien8_wire_exp[3]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[3] = alien8_wire_expected_prev[3];
+	end
+	if (
+		( alien8_wire_expected_prev[4] !== 1'bx ) && ( alien8_wire_prev[4] !== alien8_wire_expected_prev[4] )
+		&& ((alien8_wire_expected_prev[4] !== last_alien8_wire_exp[4]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[4] = alien8_wire_expected_prev[4];
+	end
+	if (
+		( alien8_wire_expected_prev[5] !== 1'bx ) && ( alien8_wire_prev[5] !== alien8_wire_expected_prev[5] )
+		&& ((alien8_wire_expected_prev[5] !== last_alien8_wire_exp[5]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[5] = alien8_wire_expected_prev[5];
+	end
+	if (
+		( alien8_wire_expected_prev[6] !== 1'bx ) && ( alien8_wire_prev[6] !== alien8_wire_expected_prev[6] )
+		&& ((alien8_wire_expected_prev[6] !== last_alien8_wire_exp[6]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[6] = alien8_wire_expected_prev[6];
+	end
+	if (
+		( alien8_wire_expected_prev[7] !== 1'bx ) && ( alien8_wire_prev[7] !== alien8_wire_expected_prev[7] )
+		&& ((alien8_wire_expected_prev[7] !== last_alien8_wire_exp[7]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[7] = alien8_wire_expected_prev[7];
+	end
+	if (
+		( alien8_wire_expected_prev[8] !== 1'bx ) && ( alien8_wire_prev[8] !== alien8_wire_expected_prev[8] )
+		&& ((alien8_wire_expected_prev[8] !== last_alien8_wire_exp[8]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[8] = alien8_wire_expected_prev[8];
+	end
+	if (
+		( alien8_wire_expected_prev[9] !== 1'bx ) && ( alien8_wire_prev[9] !== alien8_wire_expected_prev[9] )
+		&& ((alien8_wire_expected_prev[9] !== last_alien8_wire_exp[9]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[9] = alien8_wire_expected_prev[9];
+	end
+	if (
+		( alien8_wire_expected_prev[10] !== 1'bx ) && ( alien8_wire_prev[10] !== alien8_wire_expected_prev[10] )
+		&& ((alien8_wire_expected_prev[10] !== last_alien8_wire_exp[10]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[10] = alien8_wire_expected_prev[10];
+	end
+	if (
+		( alien8_wire_expected_prev[11] !== 1'bx ) && ( alien8_wire_prev[11] !== alien8_wire_expected_prev[11] )
+		&& ((alien8_wire_expected_prev[11] !== last_alien8_wire_exp[11]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[11] = alien8_wire_expected_prev[11];
+	end
+	if (
+		( alien8_wire_expected_prev[12] !== 1'bx ) && ( alien8_wire_prev[12] !== alien8_wire_expected_prev[12] )
+		&& ((alien8_wire_expected_prev[12] !== last_alien8_wire_exp[12]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[12] = alien8_wire_expected_prev[12];
+	end
+	if (
+		( alien8_wire_expected_prev[13] !== 1'bx ) && ( alien8_wire_prev[13] !== alien8_wire_expected_prev[13] )
+		&& ((alien8_wire_expected_prev[13] !== last_alien8_wire_exp[13]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[13] = alien8_wire_expected_prev[13];
+	end
+	if (
+		( alien8_wire_expected_prev[14] !== 1'bx ) && ( alien8_wire_prev[14] !== alien8_wire_expected_prev[14] )
+		&& ((alien8_wire_expected_prev[14] !== last_alien8_wire_exp[14]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[14] = alien8_wire_expected_prev[14];
+	end
+	if (
+		( alien8_wire_expected_prev[15] !== 1'bx ) && ( alien8_wire_prev[15] !== alien8_wire_expected_prev[15] )
+		&& ((alien8_wire_expected_prev[15] !== last_alien8_wire_exp[15]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alien8_wire[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alien8_wire_expected_prev);
+		$display ("     Real value = %b", alien8_wire_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_alien8_wire_exp[15] = alien8_wire_expected_prev[15];
+	end
+	if (
+		( blank_expected_prev !== 1'bx ) && ( blank_prev !== blank_expected_prev )
+		&& ((blank_expected_prev !== last_blank_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blank :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blank_expected_prev);
+		$display ("     Real value = %b", blank_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_blank_exp = blank_expected_prev;
+	end
+	if (
+		( blue_expected_prev[0] !== 1'bx ) && ( blue_prev[0] !== blue_expected_prev[0] )
+		&& ((blue_expected_prev[0] !== last_blue_exp[0]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[0] = blue_expected_prev[0];
+	end
+	if (
+		( blue_expected_prev[1] !== 1'bx ) && ( blue_prev[1] !== blue_expected_prev[1] )
+		&& ((blue_expected_prev[1] !== last_blue_exp[1]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[1] = blue_expected_prev[1];
+	end
+	if (
+		( blue_expected_prev[2] !== 1'bx ) && ( blue_prev[2] !== blue_expected_prev[2] )
+		&& ((blue_expected_prev[2] !== last_blue_exp[2]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[2] = blue_expected_prev[2];
+	end
+	if (
+		( blue_expected_prev[3] !== 1'bx ) && ( blue_prev[3] !== blue_expected_prev[3] )
+		&& ((blue_expected_prev[3] !== last_blue_exp[3]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[3] = blue_expected_prev[3];
+	end
+	if (
+		( blue_expected_prev[4] !== 1'bx ) && ( blue_prev[4] !== blue_expected_prev[4] )
+		&& ((blue_expected_prev[4] !== last_blue_exp[4]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[4] = blue_expected_prev[4];
+	end
+	if (
+		( blue_expected_prev[5] !== 1'bx ) && ( blue_prev[5] !== blue_expected_prev[5] )
+		&& ((blue_expected_prev[5] !== last_blue_exp[5]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[5] = blue_expected_prev[5];
+	end
+	if (
+		( blue_expected_prev[6] !== 1'bx ) && ( blue_prev[6] !== blue_expected_prev[6] )
+		&& ((blue_expected_prev[6] !== last_blue_exp[6]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[6] = blue_expected_prev[6];
+	end
+	if (
+		( blue_expected_prev[7] !== 1'bx ) && ( blue_prev[7] !== blue_expected_prev[7] )
+		&& ((blue_expected_prev[7] !== last_blue_exp[7]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port blue[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", blue_expected_prev);
+		$display ("     Real value = %b", blue_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_blue_exp[7] = blue_expected_prev[7];
+	end
+	if (
+		( clk_expected_prev !== 1'bx ) && ( clk_prev !== clk_expected_prev )
+		&& ((clk_expected_prev !== last_clk_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port clk :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", clk_expected_prev);
+		$display ("     Real value = %b", clk_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_clk_exp = clk_expected_prev;
+	end
+	if (
+		( green_expected_prev[0] !== 1'bx ) && ( green_prev[0] !== green_expected_prev[0] )
+		&& ((green_expected_prev[0] !== last_green_exp[0]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[0] = green_expected_prev[0];
+	end
+	if (
+		( green_expected_prev[1] !== 1'bx ) && ( green_prev[1] !== green_expected_prev[1] )
+		&& ((green_expected_prev[1] !== last_green_exp[1]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[1] = green_expected_prev[1];
+	end
+	if (
+		( green_expected_prev[2] !== 1'bx ) && ( green_prev[2] !== green_expected_prev[2] )
+		&& ((green_expected_prev[2] !== last_green_exp[2]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[2] = green_expected_prev[2];
+	end
+	if (
+		( green_expected_prev[3] !== 1'bx ) && ( green_prev[3] !== green_expected_prev[3] )
+		&& ((green_expected_prev[3] !== last_green_exp[3]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[3] = green_expected_prev[3];
+	end
+	if (
+		( green_expected_prev[4] !== 1'bx ) && ( green_prev[4] !== green_expected_prev[4] )
+		&& ((green_expected_prev[4] !== last_green_exp[4]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[4] = green_expected_prev[4];
+	end
+	if (
+		( green_expected_prev[5] !== 1'bx ) && ( green_prev[5] !== green_expected_prev[5] )
+		&& ((green_expected_prev[5] !== last_green_exp[5]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[5] = green_expected_prev[5];
+	end
+	if (
+		( green_expected_prev[6] !== 1'bx ) && ( green_prev[6] !== green_expected_prev[6] )
+		&& ((green_expected_prev[6] !== last_green_exp[6]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[6] = green_expected_prev[6];
+	end
+	if (
+		( green_expected_prev[7] !== 1'bx ) && ( green_prev[7] !== green_expected_prev[7] )
+		&& ((green_expected_prev[7] !== last_green_exp[7]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port green[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", green_expected_prev);
+		$display ("     Real value = %b", green_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_green_exp[7] = green_expected_prev[7];
+	end
+	if (
+		( hsync_expected_prev !== 1'bx ) && ( hsync_prev !== hsync_expected_prev )
+		&& ((hsync_expected_prev !== last_hsync_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port hsync :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", hsync_expected_prev);
+		$display ("     Real value = %b", hsync_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_hsync_exp = hsync_expected_prev;
+	end
+	if (
+		( red_expected_prev[0] !== 1'bx ) && ( red_prev[0] !== red_expected_prev[0] )
+		&& ((red_expected_prev[0] !== last_red_exp[0]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[0] = red_expected_prev[0];
+	end
+	if (
+		( red_expected_prev[1] !== 1'bx ) && ( red_prev[1] !== red_expected_prev[1] )
+		&& ((red_expected_prev[1] !== last_red_exp[1]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[1] = red_expected_prev[1];
+	end
+	if (
+		( red_expected_prev[2] !== 1'bx ) && ( red_prev[2] !== red_expected_prev[2] )
+		&& ((red_expected_prev[2] !== last_red_exp[2]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[2] = red_expected_prev[2];
+	end
+	if (
+		( red_expected_prev[3] !== 1'bx ) && ( red_prev[3] !== red_expected_prev[3] )
+		&& ((red_expected_prev[3] !== last_red_exp[3]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[3] = red_expected_prev[3];
+	end
+	if (
+		( red_expected_prev[4] !== 1'bx ) && ( red_prev[4] !== red_expected_prev[4] )
+		&& ((red_expected_prev[4] !== last_red_exp[4]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[4] = red_expected_prev[4];
+	end
+	if (
+		( red_expected_prev[5] !== 1'bx ) && ( red_prev[5] !== red_expected_prev[5] )
+		&& ((red_expected_prev[5] !== last_red_exp[5]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[5] = red_expected_prev[5];
+	end
+	if (
+		( red_expected_prev[6] !== 1'bx ) && ( red_prev[6] !== red_expected_prev[6] )
+		&& ((red_expected_prev[6] !== last_red_exp[6]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[6] = red_expected_prev[6];
+	end
+	if (
+		( red_expected_prev[7] !== 1'bx ) && ( red_prev[7] !== red_expected_prev[7] )
+		&& ((red_expected_prev[7] !== last_red_exp[7]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port red[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", red_expected_prev);
+		$display ("     Real value = %b", red_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_red_exp[7] = red_expected_prev[7];
+	end
+	if (
+		( sample_total_expected_prev[0] !== 1'bx ) && ( sample_total_prev[0] !== sample_total_expected_prev[0] )
+		&& ((sample_total_expected_prev[0] !== last_sample_total_exp[0]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sample_total[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sample_total_expected_prev);
+		$display ("     Real value = %b", sample_total_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_sample_total_exp[0] = sample_total_expected_prev[0];
+	end
+	if (
+		( sample_total_expected_prev[1] !== 1'bx ) && ( sample_total_prev[1] !== sample_total_expected_prev[1] )
+		&& ((sample_total_expected_prev[1] !== last_sample_total_exp[1]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sample_total[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sample_total_expected_prev);
+		$display ("     Real value = %b", sample_total_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_sample_total_exp[1] = sample_total_expected_prev[1];
+	end
+	if (
+		( sample_total_expected_prev[2] !== 1'bx ) && ( sample_total_prev[2] !== sample_total_expected_prev[2] )
+		&& ((sample_total_expected_prev[2] !== last_sample_total_exp[2]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sample_total[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sample_total_expected_prev);
+		$display ("     Real value = %b", sample_total_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_sample_total_exp[2] = sample_total_expected_prev[2];
+	end
+	if (
+		( sync_expected_prev !== 1'bx ) && ( sync_prev !== sync_expected_prev )
+		&& ((sync_expected_prev !== last_sync_exp) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sync :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sync_expected_prev);
+		$display ("     Real value = %b", sync_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_sync_exp = sync_expected_prev;
+	end
+	if (
+		( vsync_expected_prev !== 1'bx ) && ( vsync_prev !== vsync_expected_prev )
+		&& ((vsync_expected_prev !== last_vsync_exp) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port vsync :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", vsync_expected_prev);
+		$display ("     Real value = %b", vsync_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_vsync_exp = vsync_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#100000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module top_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg btn_left;
+reg btn_right;
+reg fpgaclk;
+reg sw_shooting_mode1;
+reg sw_shooting_mode2;
+// wires                                               
+wire [15:0] alien1_wire;
+wire [15:0] alien2_wire;
+wire [15:0] alien3_wire;
+wire [15:0] alien4_wire;
+wire [15:0] alien5_wire;
+wire [15:0] alien6_wire;
+wire [15:0] alien7_wire;
+wire [15:0] alien8_wire;
+wire blank;
+wire [7:0] blue;
+wire clk;
+wire [7:0] green;
+wire hsync;
+wire [7:0] red;
+wire [2:0] sample_total;
+wire sync;
+wire vsync;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+top i1 (
+// port map - connection between master ports and signals/registers   
+	.alien1_wire(alien1_wire),
+	.alien2_wire(alien2_wire),
+	.alien3_wire(alien3_wire),
+	.alien4_wire(alien4_wire),
+	.alien5_wire(alien5_wire),
+	.alien6_wire(alien6_wire),
+	.alien7_wire(alien7_wire),
+	.alien8_wire(alien8_wire),
+	.blank(blank),
+	.blue(blue),
+	.btn_left(btn_left),
+	.btn_right(btn_right),
+	.clk(clk),
+	.fpgaclk(fpgaclk),
+	.green(green),
+	.hsync(hsync),
+	.red(red),
+	.sample_total(sample_total),
+	.sw_shooting_mode1(sw_shooting_mode1),
+	.sw_shooting_mode2(sw_shooting_mode2),
+	.sync(sync),
+	.vsync(vsync)
+);
+
+// btn_left
+initial
+begin
+	btn_left = 1'b1;
+end 
+
+// btn_right
+initial
+begin
+	btn_right = 1'b1;
+end 
+
+// fpgaclk
+initial
+begin
+	repeat(99)
+	begin
+		fpgaclk = 1'b0;
+		fpgaclk = #5000 1'b1;
+		# 5000;
+	end
+	fpgaclk = 1'b0;
+	fpgaclk = #5000 1'b1;
+	# 4000;
+	repeat(9900)
+	begin
+		fpgaclk = 1'b0;
+		fpgaclk = #5000 1'b1;
+		# 5000;
+	end
+	fpgaclk = 1'b0;
+end 
+
+// sw_shooting_mode1
+initial
+begin
+	sw_shooting_mode1 = 1'b0;
+end 
+
+// sw_shooting_mode2
+initial
+begin
+	sw_shooting_mode2 = 1'b0;
+end 
+
+top_vlg_sample_tst tb_sample (
+	.btn_left(btn_left),
+	.btn_right(btn_right),
+	.fpgaclk(fpgaclk),
+	.sw_shooting_mode1(sw_shooting_mode1),
+	.sw_shooting_mode2(sw_shooting_mode2),
+	.sampler_tx(sampler)
+);
+
+top_vlg_check_tst tb_out(
+	.alien1_wire(alien1_wire),
+	.alien2_wire(alien2_wire),
+	.alien3_wire(alien3_wire),
+	.alien4_wire(alien4_wire),
+	.alien5_wire(alien5_wire),
+	.alien6_wire(alien6_wire),
+	.alien7_wire(alien7_wire),
+	.alien8_wire(alien8_wire),
+	.blank(blank),
+	.blue(blue),
+	.clk(clk),
+	.green(green),
+	.hsync(hsync),
+	.red(red),
+	.sample_total(sample_total),
+	.sync(sync),
+	.vsync(vsync),
+	.sampler_rx(sampler)
+);
+endmodule
+
